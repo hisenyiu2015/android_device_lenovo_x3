@@ -296,6 +296,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    wificond \
     hostapd \
     libwpa_client \
     wpa_supplicant \
