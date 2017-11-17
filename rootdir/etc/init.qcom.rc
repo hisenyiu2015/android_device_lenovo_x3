@@ -335,9 +335,9 @@ on post-fs-data
     # qti-logkit data
     mkdir /data/misc/qti-logkit/ 0771 system system
     mkdir /data/misc/qti-logkit/shared-privileged/ 2770 system system
-    mkdir /data/misc/qti-logkit/shared-public/ 2770 system qcom_diag
+    mkdir /data/misc/qti-logkit/shared-public/ 2770 system oem_2950
     mkdir /data/misc/qti-logkit/socket-privileged/ 2770 system system
-    mkdir /data/misc/qti-logkit/socket-public/ 2750 system qcom_diag
+    mkdir /data/misc/qti-logkit/socket-public/ 2750 system oem_2950
     mkdir /data/misc/qti-logkit/logdata/ 2750 system shell
 
 service fingerprintd /system/bin/fingerprintd
@@ -397,7 +397,7 @@ on property:wc_transport.start_hci=false
 service start_hci_filter /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth qcom_diag
+    group bluetooth oem_2950
     disabled
 
 on property:wc_transport.start_root=true
@@ -409,7 +409,7 @@ on property:wc_transport.start_root=false
 service hci_filter_root /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth qcom_diag system
+    group bluetooth oem_2950 system
     disabled
 
 service config_bt_addr /vendor/bin/btnvtool -O
@@ -495,7 +495,7 @@ service qcom-sh /system/bin/sh /init.qcom.sh
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
     user radio
-    group radio cache inet misc audio log readproc wakelock qcom_diag
+    group radio cache inet misc audio log readproc wakelock oem_2950
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service charger /charger

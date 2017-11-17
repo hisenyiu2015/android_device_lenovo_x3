@@ -411,7 +411,7 @@ vendor/lib64/libperipheral_client.so
 
 # QMI - XiaoMi aqua V10.1.1.0.NAJCNFI
 bin/irsc_util:vendor/bin/irsc_util
-etc/permissions/qti_permissions.xml
+etc/permissions/qti_permissions.xml|2826b33ed8e2756cc748c80bd6c466ff8af97ac5
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
