@@ -28,7 +28,7 @@
 
 start_msm_irqbalance()
 {
-	if [ -f /system/bin/msm_irqbalance ]; then
+	if [ -f /system/vendor/bin/msm_irqbalance ]; then
 		start msm_irqbalance
 	fi
 }

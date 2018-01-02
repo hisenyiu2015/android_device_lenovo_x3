@@ -8,7 +8,7 @@ etc/acdbdata/MTP/MTP_Headset_cal.acdb
 etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 
 # ADSP - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/adsprpcd
+bin/adsprpcd:vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
@@ -38,24 +38,24 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libhwdaphal.so
 
 # Bluetooth - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/btnvtool
-bin/hci_qcomm_init
-bin/wcnss_filter
-etc/firmware/nvm_tlv.bin
-etc/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin
-etc/firmware/rampatch_tlv.img
-etc/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv
+bin/btnvtool:vendor/bin/btnvtool
+bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
+bin/wcnss_filter:vendor/bin/wcnss_filter
+etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
+etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
+etc/firmware/nvm_tlv_2.1.bin:vendor/firmware/nvm_tlv_2.1.bin
+etc/firmware/nvm_tlv_3.0.bin:vendor/firmware/nvm_tlv_3.0.bin
+etc/firmware/nvm_tlv_3.2.bin:vendor/firmware/nvm_tlv_3.2.bin
+etc/firmware/rampatch_tlv.img:vendor/firmware/rampatch_tlv.img
+etc/firmware/rampatch_tlv_1.3.tlv:vendor/firmware/rampatch_tlv_1.3.tlv
+etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
+etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
+etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
 # Camera
-bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib/hw/camera.msm8992.so
 lib/libarcsoft_beautyshot.so
 lib/libarcsoft_hdr.so
@@ -161,12 +161,12 @@ vendor/lib/libchromatix_ov8865_preview.so
 vendor/lib/libchromatix_ov8865_snapshot.so
 
 # Camera firmware - XiaoMi aqua V10.1.1.0.NAJCNFI
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/cpp_firmware_v1_4_0.fw
-etc/firmware/cpp_firmware_v1_6_0.fw
-etc/firmware/cpp_firmware_v1_8_0.fw
+etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_4_0.fw:vendor/firmware/cpp_firmware_v1_4_0.fw
+etc/firmware/cpp_firmware_v1_6_0.fw:vendor/firmware/cpp_firmware_v1_6_0.fw
+etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw
 
 # Camera sensors
 vendor/lib/libmmcamera_isp_abf44.so
@@ -212,7 +212,7 @@ vendor/lib/libmmcamera_onsemi_cat24c64_eeprom.so
 vendor/lib/libmmcamera_ov8865.so
 
 # DRM - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/qseecomd
+bin/qseecomd:vendor/bin/qseecomd
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
@@ -297,21 +297,21 @@ vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libscale.so
 
 # Graphics firmware - XiaoMi aqua V10.1.1.0.NAJCNFI
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw
+etc/firmware/a225p5_pm4.fw:vendor/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw:vendor/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw:vendor/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw:vendor/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw:vendor/firmware/a420_pm4.fw
 
 # IMS - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/ims_rtp_daemon
-bin/imscmservice
-bin/imsdatadaemon
-bin/imsqmidaemon
+bin/ims_rtp_daemon:vendor/bin/ims_rtp_daemon
+bin/imscmservice:vendor/bin/imscmservice
+bin/imsdatadaemon:vendor/bin/imsdatadaemon
+bin/imsqmidaemon:vendor/bin/imsqmidaemon
 -vendor/app/ims/ims.apk
 -vendor/app/imssettings/imssettings.apk
 vendor/lib/lib-dplmedia.so
@@ -374,13 +374,13 @@ vendor/lib64/libOmxMux.so
 vendor/lib64/libOmxWmaDec.so
 
 # Media firmware - XiaoMi aqua V10.1.1.0.NAJCNFI
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+etc/firmware/venus.b00:vendor/firmware/venus.b00
+etc/firmware/venus.b01:vendor/firmware/venus.b01
+etc/firmware/venus.b02:vendor/firmware/venus.b02
+etc/firmware/venus.b03:vendor/firmware/venus.b03
+etc/firmware/venus.b04:vendor/firmware/venus.b04
+etc/firmware/venus.mbn:vendor/firmware/venus.mbn
+etc/firmware/venus.mdt:vendor/firmware/venus.mdt
 
 # NFC
 vendor/firmware/BCM20795A1_001.002.012.0003.0110_Generic_I2C_NCD_Unsigned_configdata.ncd
@@ -389,8 +389,8 @@ vendor/firmware/BCM20795A2_001.003.025.0005.0050_Generic_I2C_NCD_Unsigned_config
 vendor/firmware/BCM20795A2_001.003.025.0005.0051_Customers_China_NCD_Unsigned_configdata.ncd
 
 # Perf - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/energy-awareness
-bin/msm_irqbalance
+bin/energy-awareness:vendor/bin/energy-awareness
+bin/msm_irqbalance:vendor/bin/msm_irqbalance
 vendor/bin/perfd
 vendor/etc/perf-profile0.conf
 vendor/etc/perf-profile1.conf
@@ -404,13 +404,13 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libthermalclient.so
 
 # Peripheral manager - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/pm-proxy
-bin/pm-service
+bin/pm-proxy:vendor/bin/pm-proxy
+bin/pm-service:vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
 # QMI - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/irsc_util
+bin/irsc_util:vendor/bin/irsc_util
 etc/permissions/qti_permissions.xml
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
@@ -450,11 +450,11 @@ vendor/lib64/libsmemlog.so
 -app/fastdormancy/fastdormancy.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
-bin/netmgrd
-bin/qmuxd
-bin/radish
-bin/rfs_access
-bin/rmt_storage
+bin/netmgrd:vendor/bin/netmgrd
+bin/qmuxd:vendor/bin/qmuxd
+bin/radish:vendor/bin/radish
+bin/rfs_access:vendor/bin/rfs_access
+bin/rmt_storage:vendor/bin/rmt_storage
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/data/qmi_config.xml
@@ -498,7 +498,7 @@ vendor/lib64/libxml.so
 vendor/qcril.db
 
 # Sensors
-bin/sensors.qcom
+bin/sensors.qcom:vendor/bin/sensors.qcom
 etc/sensors/sensor_def_qcomdev.conf
 lib/hw/sensors.msm8992.so
 lib64/hw/sensors.msm8992.so
@@ -511,11 +511,11 @@ vendor/lib64/libsensor_reg.so
 
 # Time services - XiaoMi aqua V10.1.1.0.NAJCNFI
 -app/TimeService/TimeService.apk
-bin/time_daemon
+bin/time_daemon:vendor/bin/time_daemon
 vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
 vendor/lib64/libTimeService.so
 -vendor/lib64/libtime_genoff.so
 
 # Wi-Fi - XiaoMi aqua V10.1.1.0.NAJCNFI
-bin/cnss-daemon
+bin/cnss-daemon:vendor/bin/cnss-daemon
