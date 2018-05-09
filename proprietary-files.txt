@@ -460,10 +460,8 @@ etc/data/netmgr_config.xml
 etc/data/qmi_config.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
-etc/permissions/qti_telephony_common.xml
 framework/qcnvitems.jar
 framework/qcrilhook.jar
-framework/qti-telephony-common.jar
 framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/qti
