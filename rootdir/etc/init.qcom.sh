@@ -35,19 +35,6 @@ fi
 #
 # Function to start sensors for DSPS enabled platforms
 #
-start_sensors()
-{
-    if [ -c /dev/msm_dsps -o -c /dev/sensors ]; then
-        chmod -h 775 /persist/sensors
-        chmod -h 664 /persist/sensors/sensors_settings
-        chown -h system.root /persist/sensors/sensors_settings
-
-        mkdir -p /data/misc/sensors
-        chmod -h 775 /data/misc/sensors
-
-        start sensors
-    fi
-}
 
 start_battery_monitor()
 {
@@ -127,7 +114,6 @@ case "$baseband" in
         ;;
 esac
 
-start_sensors
 start_copying_prebuilt_qcril_db
 
 case "$target" in
@@ -259,22 +245,9 @@ esac
 #
 # Make modem config folder and copy firmware config to that folder
 #
-if [ -f /data/misc/radio/ver_info.txt ]; then
-    prev_version_info=`cat /data/misc/radio/ver_info.txt`
-else
-    prev_version_info=""
-fi
-
-cur_version_info=`cat /firmware/verinfo/ver_info.txt`
-if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
-    rm -rf /data/misc/radio/modem_config
-    mkdir /data/misc/radio/modem_config
-    chmod 770 /data/misc/radio/modem_config
-    cp -r /firmware/image/modem_pr/mcfg/configs/* /data/misc/radio/modem_config
-    chown -hR radio.radio /data/misc/radio/modem_config
-    cp /firmware/verinfo/ver_info.txt /data/misc/radio/ver_info.txt
-    chown radio.radio /data/misc/radio/ver_info.txt
-fi
-cp /firmware/image/modem_pr/mbn_ota.txt /data/misc/radio/modem_config
-chown radio.radio /data/misc/radio/modem_config/mbn_ota.txt
+rm -rf /data/misc/radio/modem_config
+mkdir /data/misc/radio/modem_config
+cp -r /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/mbn_ota/* /data/misc/radio/modem_config
+chown -hR radio.radio /data/misc/radio/modem_config
+chmod -R 770 /data/misc/radio/modem_config
 echo 1 > /data/misc/radio/copy_complete

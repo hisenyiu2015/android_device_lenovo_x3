@@ -27,8 +27,25 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
+serialno=`getprop persist.usb.serialno`
+case "$serialno" in
+	"")
+	serialnum=`getprop ro.serialno`
+	case "$serialnum" in
+		"");; #Do nothing, use default serial number
+		*)
+		echo "$serialnum" > /sys/class/android_usb/android0/iSerial
+	esac
+	;;
+	*)
+	echo "$serialno" > /sys/class/android_usb/android0/iSerial
+esac
+
 chown -h root.system /sys/devices/platform/msm_hsusb/gadget/wakeup
 chmod -h 220 /sys/devices/platform/msm_hsusb/gadget/wakeup
+
+iproduct=`getprop ro.lenovo.series`
+echo "$iproduct" > /sys/class/android_usb/android0/iProduct
 
 # Target as specified in build.prop at compile-time
 target=`getprop ro.board.platform`
@@ -146,13 +163,14 @@ case "$usb_config" in
                             setprop persist.sys.usb.config diag,adb
                         ;;
                         "msm8994" | "msm8992")
-                            setprop persist.sys.usb.config diag,serial_smd,serial_tty,rmnet_ipa,mass_storage,adb
+                            setprop persist.sys.usb.config mass_storage,adb
                         ;;
                         "msm8909")
                             setprop persist.sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
                         ;;
                         *)
-                            setprop persist.sys.usb.config diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
+                            setprop persist.sys.usb.config mass_storage,adb
+                            #setprop persist.sys.usb.config diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
                         ;;
                     esac
               ;;
