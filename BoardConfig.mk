@@ -95,6 +95,9 @@ MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
+# Double tap to wake
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input0/wake_gesture"
+
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
