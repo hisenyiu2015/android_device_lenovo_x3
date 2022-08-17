@@ -91,6 +91,9 @@ on boot
     mkdir /dev/socket/qmux_nfc 0770 nfc nfc
     chmod 2770 /dev/socket/qmux_nfc
 
+    # Restrict permissions to socket file to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
 
     #Create NETMGR daemon socket area
