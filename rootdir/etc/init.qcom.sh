@@ -26,13 +26,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-target=`getprop ro.board.platform`
-if [ -f /sys/devices/soc0/soc_id ]; then
-    platformid=`cat /sys/devices/soc0/soc_id`
-else
-    platformid=`cat /sys/devices/system/soc/soc0/id`
-fi
-
 start_msm_irqbalance()
 {
 	if [ -f /system/bin/msm_irqbalance ]; then
@@ -47,14 +40,6 @@ start_copying_prebuilt_qcril_db()
         chown -h radio.radio /data/misc/radio/qcril.db
     fi
 }
-
-baseband=`getprop ro.baseband`
-
-case "$baseband" in
-        "svlte2a")
-        start bridgemgrd
-        ;;
-esac
 
 start_copying_prebuilt_qcril_db
 start_msm_irqbalance
